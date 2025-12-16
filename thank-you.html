@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You - 2026 Bridges Gala Pledge</title>
+  <link rel="icon" href="https://bridgeshq.blob.core.windows.net/logo/Bridges-Logo-MarriottTagline.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#00AAA6',
+              dark: '#008C89',
+              ink: '#0F172A',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-neutral-50 min-h-screen flex flex-col">
+  <!-- Thin brand bar -->
+  <div class="h-1 w-full bg-brand"></div>
+
+  <main class="flex-1 flex items-center justify-center px-4 py-12">
+    <div class="max-w-lg text-center space-y-6">
+      <!-- Success checkmark -->
+      <div class="mx-auto w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <!-- Logo -->
+      <img
+        src="https://bridgeshq.blob.core.windows.net/logo/Bridges-Logo-MarriottTagline.png"
+        alt="Bridges from School to Work"
+        class="h-12 mx-auto"
+      />
+
+      <h1 class="text-3xl font-semibold text-brand-ink">Thank You for Your Pledge!</h1>
+
+      <p class="text-neutral-600">
+        Your sponsorship pledge for the <strong>2026 Bridges Gala</strong> has been received.
+      </p>
+
+      <p class="text-neutral-600">
+        A confirmation email has been sent to you with payment instructions. A member of the Bridges Gala team will be in touch to coordinate your sponsorship benefits.
+      </p>
+
+      <div class="pt-4">
+        <a
+          href="https://www.bridgestowork.org"
+          class="inline-block rounded-2xl bg-brand text-white px-8 py-3 text-sm font-semibold hover:bg-brand-dark transition"
+        >
+          Visit Our Website
+        </a>
+      </div>
+
+      <p class="text-sm text-neutral-500 pt-4">
+        Questions? Contact us at <a href="mailto:bridgesgala@orrgroup.com" class="text-brand hover:underline">bridgesgala@orrgroup.com</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="border-t border-neutral-200 bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-center">
+      <p class="text-xs text-neutral-500">
+        Bridges from School to Work is a not-for-profit organization under section 501(c)(3) of the Internal Revenue Code.
+      </p>
+      <p class="text-xs text-neutral-500">Federal ID # 52-1655740</p>
+    </div>
+  </footer>
+</body>
+</html>
