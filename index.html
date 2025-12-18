@@ -75,8 +75,8 @@
     const host = location.hostname;
     const isLocal = (host === "localhost" || host === "127.0.0.1");
     const API_BASE = isLocal
-      ? "http://localhost:4242"
-      : "https://bridges-donation-backend-b2cfejegfjgcc6f6.eastus2-01.azurewebsites.net";
+      ? "http://localhost:8080"
+      : "https://gala-pledge-backend-h0arg5f8g8e2hwf6.eastus2-01.azurewebsites.net";
   </script>
 </head>
 <body class="bg-neutral-50">
@@ -404,7 +404,7 @@
           pledgeDate: today,
         };
 
-        const res = await fetch(`${API_BASE}/submit-gala-pledge`, {
+        const res = await fetch(`${API_BASE}/submit-pledge`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(pledgeData),
@@ -435,7 +435,7 @@
             </div>
 
             <p className="text-neutral-600 mb-8">
-              Become a sponsor of the 2026 Bridges Gala. Complete the fields below and select the sponsorship level you would like to support. Our Bridges Gala team will be in touch to coordinate your sponsorship benefits and payment.
+              Become a sponsor of the 2026 Bridges Gala. Complete the fields below and select the sponsorship level you would like to support. The Bridges Gala team will be in touch to coordinate your sponsorship benefits and payment.
             </p>
 
             <form onSubmit={onSubmit} className="space-y-8">
@@ -985,7 +985,7 @@
                         <td className="py-3 px-2 font-medium sticky left-0 bg-white">Premier Seating</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
-                        <td className="text-center py-3 px-2">-</td>
+                        <td className="text-center py-3 px-2 text-brand">&#10003;</td>
                         <td className="text-center py-3 px-2">-</td>
                         <td className="text-center py-3 px-2">-</td>
                         <td className="text-center py-3 px-2">-</td>
@@ -1019,7 +1019,7 @@
                         <td className="text-center py-3 px-2">-</td>
                       </tr>
                       <tr className="border-b border-neutral-100">
-                        <td className="py-3 px-2 font-medium sticky left-0 bg-white">Stage Recognition</td>
+                        <td className="py-3 px-2 font-medium sticky left-0 bg-white">Recognition from the Stage</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
@@ -1033,7 +1033,7 @@
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
-                        <td className="text-center py-3 px-2">-</td>
+                        <td className="text-center py-3 px-2 text-brand">&#10003;</td>
                         <td className="text-center py-3 px-2">-</td>
                       </tr>
                       <tr className="border-b border-neutral-100">
@@ -1067,6 +1067,15 @@
                         <td className="py-3 px-2 font-medium sticky left-0 bg-neutral-50">Website Logo</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
+                        <td className="text-center py-3 px-2">-</td>
+                        <td className="text-center py-3 px-2">-</td>
+                        <td className="text-center py-3 px-2">-</td>
+                        <td className="text-center py-3 px-2">-</td>
+                      </tr>
+                      <tr className="border-b border-neutral-100">
+                        <td className="py-3 px-2 font-medium sticky left-0 bg-white">Website Listing</td>
+                        <td className="text-center py-3 px-2">-</td>
+                        <td className="text-center py-3 px-2">-</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
@@ -1082,7 +1091,7 @@
                         <td className="text-center py-3 px-2">-</td>
                       </tr>
                       <tr className="border-b border-neutral-100 bg-neutral-50">
-                        <td className="py-3 px-2 font-medium sticky left-0 bg-neutral-50">Meet & Greet VIPs</td>
+                        <td className="py-3 px-2 font-medium sticky left-0 bg-neutral-50">VIP Meet & Greet</td>
                         <td className="text-center py-3 px-2 text-brand">&#10003;</td>
                         <td className="text-center py-3 px-2">-</td>
                         <td className="text-center py-3 px-2">-</td>
