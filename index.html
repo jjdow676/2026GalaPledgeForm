@@ -321,10 +321,10 @@
       );
     }, [selectedTier, companyOrg, sponsorshipName, primaryContact, title, streetAddress, city, state, zip, email, phone, paymentContactName, paymentContactEmail, paymentOption, donationAmount, ticketQty]);
 
-    // Warn before leaving with unsaved data
+    // Warn before leaving with unsaved data (but not during/after submission)
     useEffect(() => {
       const handleBeforeUnload = (e) => {
-        if (hasUnsavedChanges && !submitSuccess) {
+        if (hasUnsavedChanges && !submitSuccess && !isSubmitting) {
           e.preventDefault();
           e.returnValue = '';
           return '';
@@ -332,7 +332,7 @@
       };
       window.addEventListener('beforeunload', handleBeforeUnload);
       return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-    }, [hasUnsavedChanges, submitSuccess]);
+    }, [hasUnsavedChanges, submitSuccess, isSubmitting]);
 
     // Today's date for display
     const todayFormatted = useMemo(() => {
@@ -451,7 +451,7 @@
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
                     </svg>
-                    Compare All Levels
+                    View Sponsorship Levels & Benefits
                   </button>
                 </div>
                 <p className="text-sm text-neutral-500">Please select a level (click the info icon to see benefits)</p>
